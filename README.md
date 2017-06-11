@@ -6,6 +6,17 @@ to automate daily tasks imitating much of a virtual assistant's work.
 
 To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely formatted guides for installation, configuration, usages, etc. along with the extensive documentation.
 
+## Getting Started
+
+**Linux**
+
+- Install portaudio: `sudo apt-get install portaudio19-dev`
+- Install python (2 or 3)
+- Install python pip: `sudo apt-get install python-pip` or `sudo apt-get install python3-pip`
+- Install required libraries `python install.py` or `python3 install.py`
+- Add API keys to `config.ini`
+- Run `python Index.py` or `python3 Index.py`
+
 ## Support
 
 If you run into an issue or require technical support, please first look through the closed and open **[GitHub Issues](https://github.com/slapbot/stephanie-va/issues)**, as you may find a solution there (or some useful advice, at least).
