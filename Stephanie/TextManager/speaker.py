@@ -2,6 +2,7 @@ import os
 import eyed3
 import time
 from pygame import mixer
+import sys
 
 
 class Speaker:
@@ -10,6 +11,7 @@ class Speaker:
         self.audio_file = None
 
     def speak_from_os(self, speech_result_filename):
+        self.speak_result = self.get_abs_filename(speech_result_filename)
         try:
             self.speak_result = self.get_abs_filename(speech_result_filename)
             if sys.platform == "win32":
@@ -21,8 +23,8 @@ class Speaker:
         try:
             self.hibernate()
         except:
-            print("Something went wrong with your stupid system, eyed3 named package wasn't installed probably "
-                  "Check back at the support tab in the main website. Don't worry mate, I'll help you. Or if you're "
+            print("Seems like eyed3 named package wasn't installed probably "
+                  "Check back at the support tab in the main website. Or if you're "
                   "trying to close the application abruptly, keep pressing CTRL + C repeatedly.")
 
     @staticmethod
