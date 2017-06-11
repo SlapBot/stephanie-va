@@ -12,7 +12,10 @@ class Speaker:
     def speak_from_os(self, speech_result_filename):
         try:
             self.speak_result = self.get_abs_filename(speech_result_filename)
-            os.startfile(self.speak_result)
+            if sys.platform == "win32":
+                os.startfile(self.speak_result)
+            else:
+                os.system("xdg-open " + self.speak_result)
         except:
             print("Default Audio Player for mp3 files is not set up, like vlc or something.")
         try:
