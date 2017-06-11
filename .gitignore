@@ -1,0 +1,8 @@
+Stephanie/AudioManager
+Stephanie/EventDispatcher
+Stephanie/Modules
+Stephanie/TextManager
+Stephanie/TextProcessor
+Stephanie/*.pyc
+Stephanie/local_libs
+Stephanie/__pycache__

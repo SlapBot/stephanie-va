@@ -13,7 +13,7 @@ requests
 evernote3
 pytz
 facebook-sdk
-dateutil
+python-dateutil
 Httplib2
 apiclient
 oauth2client
@@ -21,5 +21,4 @@ omdb
 psutil
 tweepy
 Pyowm
-webbrowser
 urllib3
