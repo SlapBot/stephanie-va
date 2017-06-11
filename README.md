@@ -2,9 +2,9 @@ Stephanie
 =============
 
 Stephanie is an open-source platform built specifically for voice-controlled applications as well as
-to automate daily tasks imitating much of an virtual assistant's work.
+to automate daily tasks imitating much of a virtual assistant's work.
 
-To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely formatted guides for installation, configuration, usages, etc along with the extensive documentation.
+To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely formatted guides for installation, configuration, usages, etc. along with the extensive documentation.
 
 ## Support
 
@@ -14,7 +14,7 @@ If you're still having trouble, the next place to look would be the new [Subredd
 
 ## Contact
 
-If you are looking for just a casual conversation about Stephanie or anything related to bugs/feedback or just anything contact me through social network links like [facebook](https://www.facebook.com/Drazier), [Quora](https://www.quora.com/profile/Ujjwal-Gupta-31), [Reddit](http://reddit.com/user/drazxie), where as for any formal enquiries or serious discussion consider dropping me a mail at ugupta41@gmail.com
+If you are looking for just a casual conversation about Stephanie or anything related to bugs/feedback or just anything, contact me through social network links like [facebook](https://www.facebook.com/Drazier), [Quora](https://www.quora.com/profile/Ujjwal-Gupta-31), [Reddit](http://reddit.com/user/drazxie), whereas for any formal enquiries or serious discussion consider dropping me a mail at ugupta41@gmail.com
 
 ## Sounder Algorithm
 
