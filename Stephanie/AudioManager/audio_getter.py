@@ -14,17 +14,24 @@ class AudioGetter:
         self.speech_directory = self.c.config['CORE']['speech_directory']
         self.beep_start = self.get_speeches_folder(self.c.config['CORE']['beep_start'])
         self.beep_end = self.get_speeches_folder(self.c.config['CORE']['beep_end'])
+        self.tts_option = self.c.config['TTS']['tts_player'].lower()
 
     def get_audio_from_inbuilt(self, source, signals=True):
         print(self.start_text)
         try:
             if signals:
-                self.speaker.speak_from_os(self.beep_start)
+                if self.tts_option == "os":
+                    self.speaker.speak_from_os(self.beep_start)
+                elif self.tts_option == "mixer":
+                    self.speaker.speak_from_pygame(self.beep_start)
             self.r.adjust_for_ambient_noise(source, duration=1)
             audio = self.r.listen(source)
             print(self.listened_success_text)
             if signals:
-                self.speaker.speak_from_os(self.beep_end)
+                if self.tts_option == "os":
+                    self.speaker.speak_from_os(self.beep_end)
+                elif self.tts_option == "mixer":
+                    self.speaker.speak_from_pygame(self.beep_end)
             return audio
         except AssertionError:
             print(self.listened_error_text)

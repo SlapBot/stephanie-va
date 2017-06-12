@@ -35,10 +35,13 @@ class TextManager:
         option = self.c.config['TTS']['tts_player'].lower()
         if option == "os":
             self.speaker.speak_from_os(speech_result_filename)
+        elif option == "mixer":
+            self.speaker.speak_from_pygame(speech_result_filename)
         else:
-            raise Exception("Man, did you mess up with tts_player setting? Yes you did, don't lie to me"
-                            "Go check back the docs to see which options we offer, Sigh, tomorrow you'd"
-                            "be asking a porche out of internet.")
+            raise Exception("Man, did you mess up with tts_player setting?\n"
+                            "Yes you did, don't lie to me.\n"
+                            "Go check back the docs to see which options we offer.\n"
+                            "Sigh, tomorrow you'd be asking a porche out of internet.")
 
     def speak(self, text):
         filename = self.get_speech_from_text(text).save_speech_result()

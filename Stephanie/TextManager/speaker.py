@@ -2,6 +2,7 @@ import os
 import eyed3
 import time
 from pygame import mixer
+import platform
 
 
 class Speaker:
@@ -12,7 +13,13 @@ class Speaker:
     def speak_from_os(self, speech_result_filename):
         try:
             self.speak_result = self.get_abs_filename(speech_result_filename)
-            os.startfile(self.speak_result)
+            # Check platform used
+            if platform.system() == "Linux":
+                os.system("xdg-open " + self.speak_result)
+            elif platform.system() == "Darwin":
+                os.system("open " + self.speak_result)
+            elif platform.system() == "Windows":
+                os.startfile(self.speak_result)
         except:
             print("Default Audio Player for mp3 files is not set up, like vlc or something.")
         try:
@@ -42,8 +49,7 @@ class Speaker:
             self.speak_pygame()
         except:
             print("Man switch back to os option config.ini, this package is really bad"
-                  "trust me, I spent entire day to clear one bug and there's still more."
-                  " Yolo.")
+                  "trust me, I spent entire day to clear one bug and there's still more.")
 
     def speak_pygame(self):
         mixer.init()
