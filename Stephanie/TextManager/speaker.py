@@ -2,12 +2,7 @@ import os
 import eyed3
 import time
 from pygame import mixer
-<<<<<<< HEAD
 import platform
-=======
-import sys
->>>>>>> upstream/master
-
 
 class Speaker:
     def __init__(self):
@@ -18,12 +13,13 @@ class Speaker:
         self.speak_result = self.get_abs_filename(speech_result_filename)
         try:
             self.speak_result = self.get_abs_filename(speech_result_filename)
-            if sys.platform == "win32":
-                os.startfile(self.speak_result)
-            elif sys.platform == "darwin":
-                os.system("open "+ self.speak_result)
-            else:
+            # Check platform used
+            if platform.system() == "Linux":
                 os.system("xdg-open " + self.speak_result)
+            elif platform.system() == "Darwin":
+                os.system("open " + self.speak_result)
+            elif platform.system() == "Windows":
+                os.startfile(self.speak_result)
         except:
             print("Default Audio Player for mp3 files is not set up, like vlc or something.")
         try:
