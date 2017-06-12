@@ -16,6 +16,8 @@ class Speaker:
             self.speak_result = self.get_abs_filename(speech_result_filename)
             if sys.platform == "win32":
                 os.startfile(self.speak_result)
+            elif sys.platform == "darwin":
+                os.system("open "+ self.speak_result)
             else:
                 os.system("xdg-open " + self.speak_result)
         except:
