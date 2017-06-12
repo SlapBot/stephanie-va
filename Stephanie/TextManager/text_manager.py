@@ -40,7 +40,7 @@ class TextManager:
         else:
             raise Exception("Man, did you mess up with tts_player setting?\n"
                             "Yes you did, don't lie to me.\n"
-                            "Go check back the docs to see which options we offer.\n"
+                            "Go check back the docs to see which options we offer. It's either os or mixer\n"
                             "Sigh, tomorrow you'd be asking a porche out of internet.")
 
     def speak(self, text):

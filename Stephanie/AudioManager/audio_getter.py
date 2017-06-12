@@ -24,6 +24,8 @@ class AudioGetter:
                     self.speaker.speak_from_os(self.beep_start)
                 elif self.tts_option == "mixer":
                     self.speaker.speak_from_pygame(self.beep_start)
+                else:
+                    raise AssertionError("Fill in the tts_player option in config.ini file as either os or mixer.")
             self.r.adjust_for_ambient_noise(source, duration=1)
             audio = self.r.listen(source)
             print(self.listened_success_text)
@@ -32,8 +34,11 @@ class AudioGetter:
                     self.speaker.speak_from_os(self.beep_end)
                 elif self.tts_option == "mixer":
                     self.speaker.speak_from_pygame(self.beep_end)
+                else:
+                    raise AssertionError("Fill in the tts_player option in config.ini file as either os or mixer.")
             return audio
-        except AssertionError:
+        except AssertionError as e:
+            print(e)
             print(self.listened_error_text)
             return False
 
