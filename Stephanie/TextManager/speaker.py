@@ -17,7 +17,7 @@ class Speaker:
             if platform.system() == "Linux":
                 os.system("xdg-open " + self.speak_result)
             elif platform.system() == "Darwin":
-                os.system("open " + self.speak_result)
+                os.system("afplay " + self.speak_result)
             elif platform.system() == "Windows":
                 os.startfile(self.speak_result)
             else:
