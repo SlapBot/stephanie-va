@@ -4,7 +4,7 @@ Stephanie
 Stephanie is an open-source platform built specifically for voice-controlled applications as well as
 to automate daily tasks imitating much of a virtual assistant's work.
 
-To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely formatted guides for installation, configuration, usages, etc. along with the extensive documentation.
+To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely formatted guides for installation, configuration, usages, etc. along with the extensive [documentation](http://slapbot.github.io/documentation).
 
 ## Getting Started
 
