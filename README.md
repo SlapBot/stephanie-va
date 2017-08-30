@@ -11,11 +11,11 @@ To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely 
 **Linux**
 
 - Install portaudio: `sudo apt-get install portaudio19-dev`
-- Install python (2 or 3)
-- Install python pip: `sudo apt-get install python-pip` or `sudo apt-get install python3-pip`
-- Install required libraries `python install.py` or `python3 install.py`
+- Install python 3
+- Install python pip: `sudo apt-get install python3-pip`
+- Install required libraries `python3 install.py`
 - Add API keys to `config.ini`
-- Run `python Index.py` or `python3 Index.py`
+- Run `python3 index.py`
 
 ## Support
 
