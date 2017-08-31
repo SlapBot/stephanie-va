@@ -35,6 +35,7 @@ class Boot:
                 while not self.active:
                     self.active = act.check(source)
                     self.status = self.active
+                    self.events.sleep_status = not self.status
                     if self.active:
                         self.speaker.speak("How may I help you?")
                         while self.status:
