@@ -1,7 +1,7 @@
 Stephanie
 =============
 
-[Main Website](slapbot.github.io) / [Demo](https://youtu.be/Pp5dXbWZsrU?t=1m38s) / [Documentation](http://slapbot.github.io/documentation) / [Usage](https://slapbot.github.io/documentation/usage/) / [Modules](https://slapbot.github.io/documentation/modules/) / [Developer Guide](https://slapbot.github.io/documentation/developer/) / [Slides](https://docs.google.com/presentation/d/e/2PACX-1vRo56UUB8Z6TLIDEek7G06uMMm9JoBxLXEeexNP4ybgPt8bRRsWumnpETSJwCY64RAKQZ5StP9wRr6i/pub?start=false&loop=false&delayms=3000&slide=id.gc6f73a04f_0_0)
+[Main Website](https://slapbot.github.io) / [Demo](https://youtu.be/Pp5dXbWZsrU?t=1m38s) / [Documentation](http://slapbot.github.io/documentation) / [Usage](https://slapbot.github.io/documentation/usage/) / [Modules](https://slapbot.github.io/documentation/modules/) / [Developer Guide](https://slapbot.github.io/documentation/developer/) / [Slides](https://docs.google.com/presentation/d/e/2PACX-1vRo56UUB8Z6TLIDEek7G06uMMm9JoBxLXEeexNP4ybgPt8bRRsWumnpETSJwCY64RAKQZ5StP9wRr6i/pub?start=false&loop=false&delayms=3000&slide=id.gc6f73a04f_0_0)
 
 Stephanie is an open-source platform built specifically for voice-controlled applications as well as
 to automate daily tasks imitating much of a virtual assistant's work.
