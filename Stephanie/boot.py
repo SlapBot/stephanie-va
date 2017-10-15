@@ -30,37 +30,41 @@ class Boot:
         r = sr.Recognizer()
         act = Activity(sr, r, self.events)
         assistant = VirtualAssistant(sr, r, self.events)
-        with sr.Microphone() as source:
-            if self.c.config.getboolean("SYSTEM", "wake_up_engine"):
-                while not self.active:
+        if self.c.config.getboolean("SYSTEM", "wake_up_engine"):
+            while not self.active:
+                with sr.Microphone() as source:
                     self.active = act.check(source)
                     self.status = self.active
                     self.events.sleep_status = not self.status
                     if self.active:
                         self.speaker.speak("How may I help you?")
                         while self.status:
-                            assistant.main(source)
-                            if self.events.active_status:
-                                self.status = False
-                                self.active = True
-                            elif self.events.sleep_status:
-                                self.status = False
-                                self.active = False
-            elif self.c.config.getboolean("SYSTEM", "always_on_engine"):
-                while not self.active:
+                            with sr.Microphone() as source:
+                                assistant.main(source)
+                                if self.events.active_status:
+                                    self.status = False
+                                    self.active = True
+                                elif self.events.sleep_status:
+                                    self.status = False
+                                    self.active = False
+        elif self.c.config.getboolean("SYSTEM", "always_on_engine"):
+            while not self.active:
+                with sr.Microphone() as source:
                     self.active = act.check_always_on(source)
                     self.status = self.active
                     if self.active:
                         while self.status:
-                            assistant.main(source)
-                            self.status = False
-                            self.active = False
-                            if self.events.active_status:
+                            with sr.Microphone() as source:
+                                assistant.main(source)
                                 self.status = False
-                                self.active = True
-            else:
-                self.speaker.speak("How may I help you?")
-                while self.status:
+                                self.active = False
+                                if self.events.active_status:
+                                    self.status = False
+                                    self.active = True
+        else:
+            self.speaker.speak("How may I help you?")
+            while self.status:
+                with sr.Microphone() as source:
                     assistant.main(source)
                     if self.events.active_status:
                         self.status = False

@@ -32,7 +32,7 @@ class Activity(Commander):
             chances2 = self.get_chances(['stephanie', 'wakeup'], user_text_array)
             if chances2 > chances:
                 chances = chances2
-        if chances > 0.5:
+        if chances > 70.0:
             return True
         return False
 
@@ -54,13 +54,13 @@ class Activity(Commander):
         command_text_array = assistant_name.lower().split()
         user_text_array = text.split()
         chances = self.get_chances(command_text_array, user_text_array)
-        if chances > 0.7:
+        if chances > 70.0:
             return True
         return False
 
     def get_chances(self, given_keywords, user_keywords, exact=True):
-        chances =  self.ass.get_probability(given_keywords=given_keywords, 
-                                            user_keywords=user_keywords)
+        chances = self.ass.get_probability(given_keywords=given_keywords,
+                                           user_keywords=user_keywords)
         if exact:
             return chances[0]
         return chances
