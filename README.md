@@ -17,7 +17,7 @@ To learn more, head to [Stephanie](http://slapbot.github.io/), which has nicely 
 - Install python pip: `sudo apt-get install python3-pip`
 - Install required libraries `python3 install.py`
 - Add API keys to `config.ini`
-- Run `python3 index.py`
+- Run `python3 Index.py`
 
 ## Support
 
