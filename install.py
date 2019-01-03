@@ -1,6 +1,7 @@
-import pip
 import importlib
 import os
+
+import pip
 
 
 class Installer:
