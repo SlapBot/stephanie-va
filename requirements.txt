@@ -5,6 +5,7 @@ eyeD3
 python-magic-bin==0.4.14
 pygame
 gTTS
+gtts-token
 SpeechRecognition
 Metaphone
 newsapi
